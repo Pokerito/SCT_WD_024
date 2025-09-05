@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar glass">
+    <h2>📂 Categories</h2>
+    <ul>
+      <li onclick="filterCategory('All')" class="active">All</li>
+      <li onclick="filterCategory('Work')">Work</li>
+      <li onclick="filterCategory('Study')">Study</li>
+      <li onclick="filterCategory('Personal')">Personal</li>
+      <li onclick="filterCategory('Other')">Other</li>
+    </ul>
+
+  </div>      
+
+  <!-- Main Container -->
+  <div class="container glass">
+    <h1>✨ Glass To-Do App</h1>
+
+    <!-- Quotes -->
+    <div class="quote glass" id="quoteBox">"Stay positive and keep moving forward!"</div>
+
+    <!-- Progress Bar -->
+    <div class="progress glass">
+      <div id="progressBar"></div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="input-area glass">
+      <input type="text" id="taskInput" placeholder="Add a new task...">
+      <select id="taskCategory">
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+        <option value="Personal">Personal</option>
+        <option value="Other" selected>Other</option>
+      </select>
+      <input type="date" id="taskDate">
+      <button id="addTask">➕</button>
+    </div>
+
+    <!-- Task List -->
+    <div class="task-wrapper">
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+
+  <!-- Dark/Light Mode Toggle -->
+  <button id="themeToggle" class="glass theme-toggle">🌙</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
